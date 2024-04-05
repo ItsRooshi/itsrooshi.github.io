@@ -50,7 +50,14 @@ def translate_english(event):
         if(chunk_message != None):
             collected_messages.append(chunk_message)  # save the message
             
-            output_div.innerText += chunk_message
+            #output_div.innerText += chunk_message
             #print(chunk_message, end="")
+
+    collected_messages = [m for m in collected_messages if m is not None]
+    full_reply_content = ''.join([m for m in collected_messages])
+
+    output_div.innerText = full_reply_content
+
+    #print(f"Full conversation received: {full_reply_content}")
 
     
