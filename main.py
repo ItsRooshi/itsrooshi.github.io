@@ -49,3 +49,4 @@ def translate_english(event):
         if(chunk_message != None):
             collected_messages.append(chunk_message)  # save the message
             print(chunk_message, end="")
+            """
