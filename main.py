@@ -1,4 +1,3 @@
-
 import arrr
 from pyscript import document
 
@@ -8,9 +7,8 @@ def translate_english(event):
     english = input_text.value
     output_div = document.querySelector("#output")
     output_div.innerText = arrr.translate(english)
+
 """
-
-
 # imports
 import time  # for measuring time duration of API calls
 from openai import OpenAI
