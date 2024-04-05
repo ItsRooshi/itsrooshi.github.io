@@ -36,11 +36,11 @@ def translate_english(event):
         temperature=0,
         stream=True  # again, we set stream=True
     )
-    output_div = document.querySelector("#output")
-    output_div.innerText = response
     # create variables to collect the stream of chunks
     collected_chunks = []
     collected_messages = []
+
+    output_div = document.querySelector("#output")
 
     # iterate through the stream of events
     for chunk in response:
@@ -49,4 +49,8 @@ def translate_english(event):
         chunk_message = chunk.choices[0].delta.content  # extract the message
         if(chunk_message != None):
             collected_messages.append(chunk_message)  # save the message
-            print(chunk_message, end="")
+            
+            output_div.innerText += chunk_message
+            #print(chunk_message, end="")
+
+    
