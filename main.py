@@ -37,7 +37,7 @@ def translate_english(event):
         stream=True  # again, we set stream=True
     )
     output_div = document.querySelector("#output")
-    output_div.innerText = arrr.translate(response)
+    output_div.innerText = response
     # create variables to collect the stream of chunks
     collected_chunks = []
     collected_messages = []
