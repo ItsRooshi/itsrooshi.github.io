@@ -20,7 +20,6 @@ await micropip.install("ssl")
 def translate_english(event):
     client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY","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"))
 
-
     input_text = document.querySelector("#english")
     english = input_text.value
 
