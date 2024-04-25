@@ -15,9 +15,10 @@ import time  # for measuring time duration of API calls
 from openai import OpenAI
 import os
 from pyscript import document
-await micropip.install("ssl")
 
-def translate_english(event):
+
+async def translate_english(event):
+    await micropip.install("ssl")
     client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
     input_text = document.querySelector("#english")
