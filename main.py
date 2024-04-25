@@ -17,10 +17,8 @@ import os
 from pyscript import document
 import pyodide_js
 
-
-
 async def translate_english(event):
-    #await pyodide_js.loadPackage('ssl')
+    await pyodide_js.loadPackage('ssl')
     client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
     input_text = document.querySelector("#english")
