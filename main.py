@@ -15,10 +15,12 @@ import time  # for measuring time duration of API calls
 from openai import OpenAI
 import os
 from pyscript import document
+import pyodide_js
+
 
 
 async def translate_english(event):
-    await micropip.install("ssl")
+    #await pyodide_js.loadPackage('ssl')
     client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
     input_text = document.querySelector("#english")
