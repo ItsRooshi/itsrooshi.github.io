@@ -11,6 +11,7 @@ def translate_english(event):
 
 """
 # imports
+import arrr
 import time  # for measuring time duration of API calls
 from openai import OpenAI
 import os
@@ -59,11 +60,16 @@ async def translate_english(event):
     output_div.innerText = full_reply_content
 
     #print(f"Full conversation received: {full_reply_content}")
-
+"""
 def test(event):
     input_text = document.querySelector("#english")
     english = input_text.value
     output_div = document.querySelector("#output")
     output_div.innerText = english
-
+"""
+def test(event):
+    input_text = document.querySelector("#english")
+    english = input_text.value
+    output_div = document.querySelector("#output")
+    output_div.innerText = arrr.translate(english)
     
